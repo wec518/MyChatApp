@@ -15,7 +15,7 @@ http.listen(4000, function(){
       
 
 // Connect to mongo
-mongo.connect('mongodb://127.0.0.1:27017/mongochat', function(err, client){
+new mongo.connect('mongodb://myuser:a12345@ds245210.mlab.com:45210/mydatabase', function(err, client){
     if(err){
         throw err;
     }
@@ -24,7 +24,7 @@ mongo.connect('mongodb://127.0.0.1:27017/mongochat', function(err, client){
 
     // Connect to Socket.io
     io.on('connection', function(socket){
-        let chat = client.db('mongochat').collection('chats');
+        let chat = client.db('mydatabase').collection('chats');
         console.log("a user has connected");
         // Create function to send status
         sendStatus = function(s){
