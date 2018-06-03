@@ -2,9 +2,9 @@
   "name": "mychat",
   "version": "1.0.0",
   "description": "Simple chat app using sockets",
-  "main": "index.js",
+  
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Tommy Chen",
   "license": "ISC",
